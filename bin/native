@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+
+require 'bundler/setup'
+require 'native'
+
+file = 'Gemfile.lock'
+lockfile = Bundler::LockfileParser.new(Bundler.read_file(file))
+platform = Native::Platform.new
+puts "Detected OS: #{platform.name} #{platform.version}"
+puts lockfile.specs.map(&:name)
