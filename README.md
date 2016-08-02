@@ -2,6 +2,12 @@
 
 Installs OS-specific packages required to run your gems.
 
+Inspired by [Natives](https://github.com/teohm/natives) gem by @teohm.
+
+Native anonymously communicates with a remote server to determine the required
+native dependencies for your gems. No data is sent or collected without your
+approval.
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -20,7 +26,9 @@ Or install it yourself as:
 
 ## Usage
 
-Run `native` before `bundle install`.
+Before running `bundle install`, Run:
+
+    $ native
 
 ## Development
 
